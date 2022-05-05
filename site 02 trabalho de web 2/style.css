@@ -1,0 +1,267 @@
+body{
+    margin: 0px;
+    padding: 0px;   
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    color: white;
+    background-color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container{
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-areas: 
+        'header header header header'
+        'article article article article'
+        'paginas paginas paginas paginas'
+        'footer footer footer footer';
+}
+
+
+/*função auxiliar*/
+
+ul{
+    list-style: none; 
+    display: flex;
+ }
+
+a{
+    text-decoration: none;
+}
+/* fim função auxiliar*/
+
+
+
+/*Barra de rolagem*/
+
+body::-webkit-scrollbar {
+    width: 9px
+} 
+  
+body::-webkit-scrollbar-thumb {   
+    background-color: rgb(236, 39, 84);
+    border: none;
+}
+
+/*fim Barra de rolagem*/
+
+
+
+/*Head*/
+    .header{
+        grid-area: header;
+        display: block;
+        background-color: rgb(22, 22, 22);
+        position: relative;
+        min-height: 50px;
+        padding-left: 76px;
+    }
+
+    .logo{
+        padding: 10px;
+        width: 52px;
+        height: 27px;
+        float: left;
+        margin-left: -76px;
+    }
+
+    .navbar{
+        border-radius:10px;
+        width: 330px;
+        height:25px;
+        padding: 13px;
+        float: left;
+    }
+
+    #pesquisa{
+        border: none;
+        border-right: 1px solid rgb(236, 39, 84);
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        outline: none;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-size: 13px;
+        width: 280px;
+        height: 25px;
+        padding-left: 5px;
+        float:left;
+    }
+
+    #botao_pesquisa{
+        background-color: rgb(236, 39, 84);
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        float:left;
+        height:27px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .lupa{
+        height: 16px;
+        width: 16px;
+    }
+    
+    .select_botom{
+        float: left;
+    }
+
+    .botao_fake{
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    .botao_preto{
+        background-color: rgb(22, 22, 22) ;
+        color: white;
+        padding: 15px 25px;
+        cursor: pointer;
+        list-style-type: none;
+    }
+
+    .botao_preto:hover{
+        background-color: rgb(44, 44, 44);
+    }
+
+    .botao_rosa{
+        background-color: rgb(236, 39, 84);
+        padding: 15px 25px;
+        color: white;
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    .botao_rosa:hover{
+        background-color: rgb(255, 56, 102) ;
+    }
+
+    .login{
+        float: right;
+    }
+/*Fim Head*/
+
+
+/*Article*/
+
+.article{
+    grid-area: article;
+    display: block;
+    height: 169vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.galery_container{
+    display: block;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    max-width: 1015.9px;
+    padding: 10px;
+    height: 1080px;
+}
+
+.galery{
+    display: inline;
+    vertical-align: top;
+}
+
+#imagem{
+    width: 250px;
+    height: 357px;
+}
+
+.play{
+    position: absolute;
+    display: inline;
+    float: left;
+    width: 248px;
+    height: 355px;
+    opacity: 0;
+    border: solid 2px rgb(167, 0, 0);
+    background-color: rgba(82, 82, 82, 0.315);
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    text-align: center;
+    
+    cursor: pointer;
+}
+
+.play_botao{
+    position: relative;
+    top: 120px;
+}
+
+#play_t{
+    width: 100px;
+    height: 100px;
+}
+
+.play:hover{
+    opacity: 1;
+}
+
+/*Fim Article*/
+
+/*Paginas*/
+    .paginas{
+        display: block;
+        grid-area: paginas;
+        padding: 1px;
+        margin-top: 12px;
+        height: 7vh;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .page{
+        color: white;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        text-decoration: none;
+        display: inline-block;
+        
+    }
+
+    .page:hover{
+        background-color: rgb(70, 70, 70);
+        border-radius: 170px;
+    }
+/*Fim Paginas*/
+
+
+/*footer*/
+.footer{
+    padding-top: 22px;
+    grid-area: footer;
+    display: block;
+    height: 10vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.contatos{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.separação{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*fim footer*/
